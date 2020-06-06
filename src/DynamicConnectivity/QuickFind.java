@@ -1,31 +1,37 @@
 package DynamicConnectivity;
 
 public class QuickFind {
-    int[] idNums;
+    private int[] ids;
 
     QuickFind(int n){
-        idNums = new int[n];
+        ids = new int[n + 1];
 
-        for (int i = 0; i < idNums.length; i++) {
-            idNums[i] = i;
+        for (int i = 0; i < ids.length; i++) {
+            ids[i] = i;
         }
     }
 
     void union(int n, int m){
-        idNums[n] = idNums[m];
+        for (int i = 0; i < ids.length; i++){
+            if (ids[i] == n){
+                ids[i] = m;
+            }
+        }
+
+        ids[n] = ids[m];
     }
 
     boolean areConnected(int n, int m){
-        return idNums[n] == idNums[m];
+        return ids[n] == ids[m];
     }
 
     @Override
     public String toString() {
-        String s = "";
-        for (int i = 0; i < idNums.length; i++) {
-            s += (i + ": " + idNums[i] + ", ");
+        StringBuilder s = new StringBuilder();
+        for (int i = 0; i < ids.length; i++) {
+            s.append(i).append(": ").append(ids[i]).append(", ");
         }
 
-        return s;
+        return s.toString();
     }
 }
