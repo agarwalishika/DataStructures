@@ -1,22 +1,22 @@
 package StacksNQueues;
 
-class Stacks {
+class Stacks<Item> {
     Node head;
 
-    void push(String str){
-        Node first = new Node(str);
+    void push(Item item){
+        Node first = new Node(item);
         first.setNext(head);
         head = first;
     }
 
-    String pop(){
+    Item pop(){
         if (head == null){
             return null;
         }
 
         Node old = head;
         head = head.getNext();
-        return old.getStr();
+        return (Item) old.getData();
     }
 
     boolean isEmpty(){
@@ -37,7 +37,7 @@ class Stacks {
     void print(){
         Node curr = head;
         while (curr != null){
-            System.out.print("{ " + curr.getStr() + " } -> ");
+            System.out.print("{ " + curr.getData() + " } -> ");
             curr = curr.getNext();
         }
 

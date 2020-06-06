@@ -2,50 +2,50 @@ package StacksNQueues;
 
 public class Main {
     public static void main(String[] args) {
-        //stackRunner();
+        stackRunner();
         queueRunner();
     }
 
-    public static void queueRunner(){
-        Queues q = new Queues();
-        q.enqueue("A");
-        q.enqueue("B");
-        q.enqueue("C");
+    public static void stackRunner(){
+        Stacks<Integer> s = new Stacks<>();
+        s.push(3);
+        s.push(2);
+        s.push(1);
 
-        q.print();
+        s.print();
 
-        q.dequeue();
-        q.print();
+        s.pop();
+        s.print();
 
-        q.dequeue();
-        q.print();
+        s.pop();
+        s.print();
 
-        q.dequeue();
-        q.print();
+        s.pop();
+        s.print();
 
-        q.dequeue();
-        q.print();
+        s.pop();
+        s.print();
+
     }
 
-    public static void stackRunner(){
-        Stacks s = new Stacks();
-        s.push("C");
-        s.push("B");
-        s.push("A");
+    public static void queueRunner(){
+        Queues<Integer> q = new Queues<>();
+        q.enqueue(1);
+        q.enqueue(2);
+        q.enqueue(3);
 
-        s.print();
+        q.print();
 
-        s.pop();
-        s.print();
+        q.dequeue();
+        q.print();
 
-        s.pop();
-        s.print();
+        q.dequeue();
+        q.print();
 
-        s.pop();
-        s.print();
+        q.dequeue();
+        q.print();
 
-        s.pop();
-        s.print();
-
+        q.dequeue();
+        q.print();
     }
 }

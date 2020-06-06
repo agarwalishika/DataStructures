@@ -2,18 +2,18 @@ package StacksNQueues;
 
 import java.util.ArrayList;
 
-public class Queues {
-    private ArrayList<String> data;
+public class Queues<Item> {
+    private ArrayList<Item> data;
 
     Queues(){
         data = new ArrayList<>();
     }
 
-    void enqueue(String str){
-        data.add(str);
+    void enqueue(Item item){
+        data.add(item);
     }
 
-    String dequeue(){
+    Item dequeue(){
         if (data.size() == 0){
             return null;
         }

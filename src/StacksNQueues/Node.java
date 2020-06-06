@@ -1,11 +1,11 @@
 package StacksNQueues;
 
-class Node {
-    private String str;
+class Node<Item> {
+    private Item data;
     private Node next;
 
-    Node(String str){
-        this.str = str;
+    Node(Item str){
+        this.data = str;
         next = null;
     }
 
@@ -17,7 +17,7 @@ class Node {
         return next;
     }
 
-    String getStr(){
-        return str;
+    Item getData(){
+        return data;
     }
 }
