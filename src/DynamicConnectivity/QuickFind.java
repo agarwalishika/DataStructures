@@ -13,12 +13,10 @@ public class QuickFind {
 
     void union(int n, int m){
         for (int i = 0; i < ids.length; i++){
-            if (ids[i] == n){
-                ids[i] = m;
+            if (ids[i] == ids[n]){
+                ids[i] = ids[m];
             }
         }
-
-        ids[n] = ids[m];
     }
 
     boolean areConnected(int n, int m){

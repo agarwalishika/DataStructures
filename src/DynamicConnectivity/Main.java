@@ -12,7 +12,7 @@ public class Main {
         // zero-indexed
         QuickFind qf = new QuickFind(10);
 
-        qf.union(4, 3);
+        qf.union(3, 4);
         qf.union(8, 3);
         qf.union(6, 5);
         qf.union(9, 4);

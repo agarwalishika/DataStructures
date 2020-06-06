@@ -23,7 +23,7 @@ public class QuickUnion {
     }
 
     void union(int n, int m){
-        ids[n] = findRoot(m);
+        ids[findRoot(n)] = findRoot(m);
     }
 
     boolean areConnected(int n, int m){
