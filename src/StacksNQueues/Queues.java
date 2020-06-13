@@ -2,7 +2,7 @@ package StacksNQueues;
 
 import java.util.ArrayList;
 
-public class Queues<Item> {
+class Queues<Item> {
     private ArrayList<Item> data;
 
     Queues(){

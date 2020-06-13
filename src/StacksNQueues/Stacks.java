@@ -1,7 +1,7 @@
 package StacksNQueues;
 
 class Stacks<Item> {
-    Node head;
+    private Node head;
 
     void push(Item item){
         Node first = new Node(item);
