@@ -5,7 +5,12 @@ public class Main {
         //testSelection();
         //testInsertion();
         //testShell();
-        testShuffle();
+        //testShuffle();
+        //testMerge();
+        //testSort();
+        //testPartition();
+        testQuickSort();
+
     }
 
     static void testSelection(){
@@ -42,6 +47,55 @@ public class Main {
         print(nums);
         nums = s.shuffle(nums);
         print(nums);
+    }
+
+    static void testMerge(){
+        Merge m = new Merge();
+        int[] nums = {1, 3, 5, 7, 9, 2, 4, 6, 8};
+        print(nums);
+
+        m.merge(nums, 0, 5, 8);
+
+        print(nums);
+
+    }
+
+    static void testSort(){
+        Merge m = new Merge();
+        Shuffle s = new Shuffle();
+        int[] nums = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        nums = s.shuffle(nums);
+        print(nums);
+
+        m.sort(nums, 0, nums.length - 1);
+
+        print(nums);
+    }
+
+    static void testPartition(){
+        Quicksort q = new Quicksort();
+        Shuffle s = new Shuffle();
+        int[] nums = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        nums = s.shuffle(nums);
+        print(nums);
+
+        System.out.println("Paritions: " + q.partition(nums, 0, nums.length - 1));
+
+        print(nums);
+
+    }
+
+    static void testQuickSort(){
+        Quicksort q = new Quicksort();
+        Shuffle s = new Shuffle();
+        int[] nums = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        nums = s.shuffle(nums);
+        print(nums);
+
+        q.sort(nums, 0, nums.length - 1);
+
+        print(nums);
+
     }
 
 

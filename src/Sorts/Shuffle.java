@@ -2,7 +2,7 @@ package Sorts;
 
 public class Shuffle {
 
-    int[] shuffle(int[] nums){
+    public int[] shuffle(int[] nums){
         int length = nums.length;
         int[][] shuffled = new int[2][length];
 
