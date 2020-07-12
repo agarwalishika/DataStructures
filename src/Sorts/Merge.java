@@ -23,16 +23,6 @@ public class Merge {
         int k = low;
         int j = mid + 1;
         for(int i = low; i <= high; i++){
-            /*if (k > mid){
-                nums[i] = copy[j++];
-            } else if (j > high){
-                nums[i] = copy[k++];
-            } else if (copy[j] < copy[k]){
-                nums[i] = copy[j++];
-            } else{
-                nums[i] = copy[k++];
-            }*/
-
             if (j <= high && ((k > mid) || (copy[j] < copy[k]))){
                 nums[i] = copy[j++];
             } else{
